@@ -730,8 +730,237 @@ footer h4{
     padding: 0 10% 20% 10%;
 }
 
+.mp-group{
+    width: 100%;
+    float: left;
+}
 .mp-group a{
     display: inline-block;
     margin: 0 5px;
+    width: 120px;
 }
 
+.dist-group{
+    width: 100%;
+    float: left;
+    background: url(../images/phone-mockup.png) no-repeat center top;
+    background-size: cover;
+    padding: 80px 50px 60px;
+    position: relative;
+}
+.dist-group::before{
+    content: "";
+    width: 657px;
+    height: 98px;
+    background: url(../images/shadow.png) no-repeat center bottom;
+    background-size: contain;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    z-index: 2;
+}
+.dist-group a{
+    width: 100%;
+    float: left;
+    height: 60px;
+    margin: 20px 0;
+    position: relative;
+}
+.dist-group a img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+}
+.dist-group a:hover img{
+    transform: translate(-50%,-50%) scale(1.2);
+    -moz-transform: translate(-50%,-50%) scale(1.2);
+    -webkit-transform: translate(-50%,-50%) scale(1.2);
+}
+
+.offline-dist{
+    background: #f4f4f4;
+    border-bottom: 1px solid #dedede;
+}
+
+.dist-list{
+    width: 100%;
+    float: left;
+}
+.dist-header{
+    width: 100%;
+    float: left;
+    padding: 20px 30px;
+    background: var(--green2);
+    color: #fff;
+}
+.dist-header h3{
+    font-size: 18px;
+}
+.dist-list ul{
+    padding: 0 30px;
+    height: 450px;
+    width: 100%;
+    float: left;
+    background: #fff;
+    overflow-y: scroll;
+}
+.dist-list ul li{
+    width: 100%;
+    float: left;
+    padding: 20px 80px 20px 0;
+    border-bottom: 1px solid #dedede;
+    position: relative;
+}
+.dist-list ul li:last-child{
+    border-bottom: none;
+}
+.bt-map{
+    width: 60px;
+    height: 60px;
+    background: #f4f4f4;
+    text-align: center;
+    color: var(--green2);
+    position: absolute;
+    top: 20px;
+    right: 0;
+    padding-top: 7px;
+}
+.bt-map i{
+    font-size: 25px;
+    width: 100%;
+    float: left;
+}
+.bt-map span{
+    font-size: 10px;
+}
+
+.dist-map{
+    width: 100%;
+    float: left;
+    position: relative;
+}
+.points{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.points a{
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    overflow: hidden;
+    color: #333;
+    background: rgba(255,255,255,0);
+    padding: 5px 10px;
+    transform: translate(-10px,-5px);
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+.points a i{
+    color: #FFA800;
+    font-size: 18px;
+}
+.points a span{
+    font-weight: 300;
+    margin-left: 5px;
+    font-size: 14px;
+    color: #333;
+    opacity: 0;
+}
+.points a:hover{
+    background: #fff;
+    width: auto;
+    z-index: 2;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+.points a:hover span{
+    opacity: 1;
+}
+
+.points a.jakarta{
+    top: 62%;
+    left: 27%;
+}
+.points a.jawa-barat{
+    top: 67%;
+    left: 28%;
+}
+.points a.jawa-tengah{
+    top: 66%;
+    left: 33%;
+}.points a.jawa-timur{
+    top: 68%;
+    left: 38%;
+}
+.points a.sulawesi-selatan{
+    top: 55%;
+    left: 53%;
+}
+
+.contact p{
+    padding-left: 30px;
+    position: relative;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: rgba(255,255,255,0.8);
+}
+.contact p i{
+    font-size: 18px;
+    color: var(--green1);
+    position: absolute;
+    left: 0;
+    top: 3px;
+    width: 18px;
+    text-align: center;
+}
+.contact-form label{
+    width: 100%;
+    float: left;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+.contact-form input,
+.contact-form textarea{
+    width: 100%;
+    padding: 10px 20px;
+    background: #fafafa;
+    border: none;
+    border-bottom: 1px solid #dedede;
+}
+.contact-form input:focus,
+.contact-form textarea:focus{
+    outline: none;
+    border-color: var(--green2);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+.contact::before{
+    content: "";
+    width: 45%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--green3);
+}
+.contact::after{
+    content: "";
+    width: 45%;
+    position: absolute;
+    height: 80px;
+    top: -80px;
+    left: 0;
+    background: url(../images/contact-before.png) no-repeat bottom left;
+}
