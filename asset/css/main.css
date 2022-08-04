@@ -86,6 +86,9 @@ figure img{
     color: #fff;
     border: none;
 }
+.btn-primary:hover{
+    background: var(--green3);
+}
 .btn-secondary{
     background: none;
     border: 2px solid var(--green2);
@@ -215,7 +218,7 @@ header{
     width: 40px;
     height: 40px;
     display: inline-block;
-    padding-top: 5px;
+    padding-top: 7px;
     margin: 17px 4px 0;
     font-size: 18px;
     color: #fff;
@@ -309,6 +312,47 @@ header.scrolled .bottom-header::after{
     background-size: contain;
     padding-bottom: 0;
 }
+.tab-group-wrap{
+    width: 100%;
+    height: 530px;
+    position: relative;
+}
+.tab-group{
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+.tab-group.show{
+    opacity: 1;
+    pointer-events: auto;
+}
+.tab-group figure{
+    padding: 0 50px;
+    height: 360px;
+    position: relative;
+}
+.tab-group figure img{
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+}
+.tab-group.show figure img{
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+}
+
 .product .text h3{
     font-size: 24px;
     margin-bottom: 20px;
@@ -320,6 +364,9 @@ header.scrolled .bottom-header::after{
 .product .thumb{
     display: inline-block;
     width: 50%;
+}
+.product .thumb:hover{
+    cursor: pointer;
 }
 .product .thumb-group .column:nth-child(odd) .thumb{
     transform: translateY(-90px);
@@ -341,9 +388,15 @@ header.scrolled .bottom-header::after{
 }
 .product .text-left{
     padding-right: 40px;
+    transform: translateX(100px);
 }
 .product .text-right{
     padding-left: 40px;
+    transform: translateX(-100px);
+}
+.product .tab-group.show .text-left,
+.product .tab-group.show .text-right{
+    transform: translateX(0);
 }
 
 .product .text-left .item::before,
@@ -697,7 +750,7 @@ footer h4{
 
 .product-cover{
     padding-bottom: 0;
-    padding-top: 220px;
+    padding-top: 250px;
     background: url(../images/page-cover-bg.jpg) no-repeat center;
     background-size: cover;
 }
@@ -794,6 +847,10 @@ footer h4{
 .dist-list{
     width: 100%;
     float: left;
+    display: none;
+}
+.dist-list.show{
+    display: block;
 }
 .dist-header{
     width: 100%;
@@ -963,4 +1020,117 @@ footer h4{
     top: -80px;
     left: 0;
     background: url(../images/contact-before.png) no-repeat bottom left;
+}
+
+.logo-group{
+    position: absolute;
+    top: 180px;
+    left: calc((100vw - 1368px) / 2);
+    margin-left: 20px;
+    z-index: 2;
+}
+.logo-group a{
+    display: inline-block;
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.foot-social{
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+    text-align: left;
+}
+.foot-social a{
+    text-align: center;
+    display: inline-block;
+    font-size: 18px;
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding-top: 6px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+
+.burger-bt{
+    width: 40px;
+    height: 40px;
+    display: none;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    margin-left: 10px;
+}
+
+@media only screen and (max-width: 1024px){
+    .master{
+        overflow-x: hidden;
+    }
+    .columns{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    a.logo{
+        width: 60px;
+        height: 60px;
+        margin-top: 10px;
+    }
+
+    .burger-bt{
+        display: inline-block;
+    }
+
+    .main-menu{
+        position: fixed;
+        background: var(--green3);
+        top: 167px;
+        right: -100%;
+        width: 100vw;
+        height: calc(100vh - 167px);
+        overflow-y: auto;
+        padding: 20px 0;
+    }
+    .nav-item{
+        width: 100%;
+        float: left;
+    }
+    .nav-item.active a, .nav-item a:hover{
+        border-color: rgba(255,255,255,0);
+    }
+    .nav-item a{
+        padding: 15px 20px;
+    }
+    .src-form{
+        position: fixed;
+        top: 117px;
+        right: -100%;
+        width: 100vw;
+        height: 60px;
+        background: var(--green3);
+        z-index: 2;
+        padding: 10px 20px;
+    }
+    .src-form button{
+        right: 20px;
+        top: 10px;
+    }
+    .src-form input{
+        border-bottom: 1px solid rgba(255,255,255,0.3);
+    }
+
+    header.show-mob-menu .main-menu,
+    header.show-mob-menu .src-form{
+        right: 0;
+    }
+    .bottom-header::before{
+        width: 100%;
+    }
+    .installation{
+        padding-top: 100px;
+    }
 }
