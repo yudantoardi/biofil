@@ -608,6 +608,7 @@ footer h4{
     padding-top: 0;
     padding-bottom: 0;
     height: 360px;
+    background: var(--green3);
 }
 .page-cover figure{
     height: 100%;
@@ -641,6 +642,10 @@ footer h4{
     position: absolute;
     left: 0;
     bottom: -1px;
+}
+
+.page-cover.installation-page::after{
+    display: none;
 }
 
 .article figure{
@@ -1080,6 +1085,21 @@ footer h4{
     color: #fff;
     text-align: center;
     margin-left: 10px;
+}
+
+.foot-nav a{
+    width: 100%;
+    float: left;
+    margin-bottom: 10px;
+    color: rgba(255,255,255,0.7);
+}
+.foot-nav a:hover{
+    color: #fff;
+}
+
+.installation-dt{
+    background: url(../images/installation-cover.png) no-repeat center top;
+    background-size: contain;
 }
 
 @media only screen and (max-width: 1024px){
