@@ -201,6 +201,7 @@ header{
 }
 .nav-item{
     float: left;
+    position: relative;
 }
 .nav-item a{
     display: block;
@@ -213,6 +214,43 @@ header{
 .nav-item a:hover{
     border-color: #31C174;
     color: #31C174;
+}
+.nav-item a i{
+    margin-left: 10px;
+}
+.nav-item .dropdown{
+    width: 360px;
+    background: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 30px 0;
+    opacity: 0;
+    pointer-events: none;
+}
+.nav-item .dropdown a{
+    color: #333;
+    width: 100%;
+    float: left;
+    padding: 10px 20px;
+    position: relative;
+}
+.nav-item .dropdown h4{
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+.nav-item .dropdown::before{
+    content: "";
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #f4f4f4;
+}
+.nav-item:hover .dropdown{
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .social-bt{
@@ -771,7 +809,7 @@ footer h4{
 
 .product-cover{
     padding-bottom: 0;
-    padding-top: 250px;
+    padding-top: 270px;
     background: url(../images/page-cover-bg.jpg) no-repeat center;
     background-size: cover;
 }
@@ -1043,18 +1081,26 @@ footer h4{
     background: url(../images/contact-before.png) no-repeat bottom left;
 }
 
-.logo-group{
+.l-group{
     position: absolute;
-    top: 180px;
-    left: calc((100vw - 1368px) / 2);
-    margin-left: 20px;
+    left: 0;
+    top: 100px;
+    z-index: 2;
+}
+.logo-group{
+    margin-left: -24px;
     z-index: 2;
 }
 .logo-group a{
     display: inline-block;
-    width: 100px;
+    width: 150px;
     height: auto;
     margin-right: 10px;
+}
+.logo-group a img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .foot-social{
@@ -1101,6 +1147,7 @@ footer h4{
     background: url(../images/installation-cover.png) no-repeat center top;
     background-size: contain;
 }
+
 
 @media only screen and (max-width: 1024px){
     .master{
