@@ -16,10 +16,22 @@ $(document).ready(function(){
         $($(this).attr("data-target")).addClass("show");
     });
 
+    
+    var select = $('.dist-header select');
+
     $(".points a").click(function(p){
         p.preventDefault();
         $(".dist-list").removeClass("show");
         $($(this).attr("href")).addClass("show");
+
+        $(select).children().attr("value" = $(this).attr("href")).select();
+    });
+
+    select.on('change', function(){
+        var selectedOptionText = $(this).children(':selected').val();
+        
+        $(".dist-list").removeClass("show");
+        $("#" + selectedOptionText).addClass("show");
     });
 
     $(".burger-bt").click(function(bb){

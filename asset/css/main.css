@@ -1148,6 +1148,19 @@ footer h4{
     background-size: contain;
 }
 
+.dist-header select{
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    background: none;
+    border: none;
+    width: 100%;
+}
+.dist-header select option{
+    font-size: 14px;
+    color: #333;
+    font-weight: 400;
+}
 
 @media only screen and (max-width: 1024px){
     .master{
